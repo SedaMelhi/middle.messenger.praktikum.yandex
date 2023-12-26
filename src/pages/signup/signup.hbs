@@ -1,0 +1,16 @@
+<div class="container">
+    {{#> Form title="Sign up" subtitle="Please register to start using the platform" question="Already have an account?" link="login" link-text="Log in"}}
+        {{> Input label="First name" name="first_name" placeholder="Name"}}
+        {{> Input label="Surname" name="second_name" placeholder="Surname"}}
+        {{> Input label="Login" name="login" placeholder="Login"}}
+        {{> Input label="Email" name="email" type="email" placeholder="emailexample@gmail.com"}}
+        {{> Input label="Phone" name="phone" type="tel" placeholder="+7(999) 999-99-99"}}
+        {{> Input label="Password" name="password" type="password" placeholder="Enter your password"}}
+        {{!-- {{> Input label="Password" name="password" type="password" placeholder="Enter your password" error="Passwords don't match"}} --}}
+        {{> Input label="Confirm password" name="password" type="password" placeholder="Enter your password"}}
+        {{> Button label="Sign up" type="primary" page="list"}}
+    {{/Form}}
+</div>
+
+
+{{!-- : first_name, second_name, login, email, password, phone). --}}

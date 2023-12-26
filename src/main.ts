@@ -1,15 +1,16 @@
 import Handlebars from 'handlebars';
-// import * as Components from './components';
-// import * as Pages from './pages';
+import * as Components from './components';
+import * as Pages from './pages';
 
-// const pages = {
-//   'login': [ Pages.LoginPage, {test: '123'} ],
-//   'list': [ Pages.ListPage ],
-// };
+const pages = {
+  login: [Pages.LoginPage],
+  signup: [Pages.SignUpPage],
+  // login: [Pages.LoginPage, { test: '123' }],
+};
 
-// Object.entries(Components).forEach(([ name, component ]) => {
-//   Handlebars.registerPartial(name, component);
-// });
+Object.entries(Components).forEach(([name, component]) => {
+  Handlebars.registerPartial(name, component);
+});
 
 function navigate(page: string) {
   //@ts-ignore

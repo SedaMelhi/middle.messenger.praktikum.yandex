@@ -1,5 +1,5 @@
-// export { Button } from './button'
-// export { Input } from './input'
-// export { FormAuth } from './form-auth'
+export { Input } from './input/input';
+export { Form } from './form/form';
+export { Button } from './button/button';
 // export { ListCat } from './list-cats'
 // export { CatCard } from './cat-card'
