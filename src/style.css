@@ -1,14 +1,65 @@
-/* @import '/src/components/button/button.css';
-@import '/src/components/cat-card/cat-card.css';
-@import '/src/components/form-auth/form-auth.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import '/src/pages/login/login.css';
 @import '/src/components/input/input.css';
+@import '/src/components/form/form.css';
+@import '/src/components/button/button.css';
+/* ';
+@import '/src/components/cat-card/cat-card.css';
 @import '/src/components/list-cats/list-cat.css';
-@import '/src/pages/login/login.css'; */
+*/
 
 :root {
-    --main-color: #3369f3;
-    --second-color: #e4edfd;
-    --error-color: #ff2f2f;
-    --text-color: #1e1e1e;
-    --text-secondary-color: #999;
+  --bg-color: #0B0B0B;
+  --error-color: #ff2f2f;
+  --text-color: #969FA3;
+  --label-color: #828282;
+  --stroke-color: #CED3D6;
+  --white: #FFFFFF;
+  --violet: #66F;
+  --dark-violet: rgb(63, 63, 157);
+  --text-secondary-color: #999;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 18px;
+}
+
+body{
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li{
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, button{
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+input{
+  width: 100%;
+  display: block;
+  outline: none;
+  &:focus{
+    outline: none;
   }
+}
