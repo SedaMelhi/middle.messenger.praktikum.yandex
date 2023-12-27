@@ -1,0 +1,19 @@
+<div class='container-full chats-wrap dialog'>
+  <aside class='aside'>
+    {{> AsideHeader}}
+    <div class="chats">
+      {{#each (users)}}
+        {{> Chat}}
+      {{/each}}
+    </div>
+  </aside>
+  <main class='main'>
+    {{> MainHeader}}
+    {{> ChatFeed }}
+    <div class="input-message__wrap">
+      {{> InputMessage}}
+      {{> Button value="Send"}}
+    </div>
+   
+  </main>
+</div>
