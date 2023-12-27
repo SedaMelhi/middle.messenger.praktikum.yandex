@@ -3,6 +3,8 @@
         {{> Input label="Login" name="login" placeholder="Login"}}
         {{!-- {{> Input label="Login" name="login" placeholder="Login" error="Incorrect login"}} --}}
         {{> Input label="Password" type="password" name="password" placeholder="Enter your password"}}
-        {{> Button label="Log in" type="primary" page="list"}}
+        <div class="btn_margin">
+            {{> Button value="Log in" type="primary" page="chats"}}
+        </div>
     {{/Form}}
 </div>

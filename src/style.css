@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import '/src/pages/login/login.css';
 @import '/src/components/input/input.css';
 @import '/src/components/form/form.css';
 @import '/src/components/button/button.css';
-/* ';
-@import '/src/components/cat-card/cat-card.css';
-@import '/src/components/list-cats/list-cat.css';
-*/
+@import '/src/pages/chats/chats.css';
+@import '/src/components/chat/chat.css';
+@import '/src/components/title/title.css';
+@import '/src/components/asideHeader/asideHeader.css';
+@import '/src/components/mainHeader/mainHeader.css';
+@import '/src/components/chatFeed/chatFeed.css';
+@import '/src/components/message/message.css';
+@import '/src/components/inputMessage/inputMessage.css';
+@import '/src/pages/dialog/dialog.css';
 
 :root {
   --bg-color: #0B0B0B;
@@ -17,7 +22,12 @@
   --white: #FFFFFF;
   --violet: #66F;
   --dark-violet: rgb(63, 63, 157);
-  --text-secondary-color: #999;
+  --bg2-color: #101010;
+  --header-stroke: #292929;
+  --avatar-color: #006BDA;
+  --active-chat: #000;
+  --message-bg: #181818;
+  --grey: #575757;
 }
 
 *{
@@ -25,7 +35,10 @@
 }
 
 html{
-  font-size: 18px;
+  font-size: 15px;
+  @media(min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 body{
@@ -55,11 +68,38 @@ button{
   cursor: pointer;
   color: inherit;
 }
+img{
+  display: block;
+}
 input{
   width: 100%;
   display: block;
   outline: none;
+  font-size: inherit;
   &:focus{
     outline: none;
   }
+}
+.container-full{
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 0;
+  height: 100vh;
+  @media(min-width: 1450px) {
+    border-radius: 20px;
+  }
+}
+/* Стилизация самого скроллбара */
+::-webkit-scrollbar {
+  width: 4px; /* ширина скроллбара */
+}
+
+/* Стилизация трека (дорожки) скроллбара */
+::-webkit-scrollbar-track {
+  background: rgb(63, 63, 157, 0.2); /* цвет фона дорожки */
+}
+
+/* Стилизация ползунка скроллбара */
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 157, 0.5); /* цвет ползунка */
 }

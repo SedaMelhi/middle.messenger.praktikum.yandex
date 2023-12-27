@@ -5,6 +5,8 @@ import * as Pages from './pages';
 const pages = {
   login: [Pages.LoginPage],
   signup: [Pages.SignUpPage],
+  chats: [Pages.Chats],
+  dialog: [Pages.Dialog],
   // login: [Pages.LoginPage, { test: '123' }],
 };
 
@@ -19,7 +21,7 @@ function navigate(page: string) {
   container.innerHTML = Handlebars.compile(source)(context);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('login'));
+document.addEventListener('DOMContentLoaded', () => navigate('dialog'));
 
 document.addEventListener('click', (e) => {
   //@ts-ignore

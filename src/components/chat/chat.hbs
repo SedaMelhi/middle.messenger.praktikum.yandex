@@ -1,0 +1,22 @@
+<div class='chat {{#if active}}chat_active{{/if}}' page="dialog">
+<div class="chat__left">
+  <div class='chat__avatar'>
+    {{#if avatar}}
+      <img src={{avatar}} alt='' />
+    {{else}}
+      {{firstChar name}}
+    {{/if}}
+  </div>
+  <div class='chat__message'>
+    <div class='chat__name'>{{name}}</div>
+    <div class='chat__text'>{{message}}</div>
+  </div>
+</div>
+  
+  <div class='chat__data'>
+    <div class='chat__time'>{{time}}</div>
+    {{#if count}}
+      <div class='chat__count'>{{count}}</div>
+    {{/if}}
+  </div>
+</div>
