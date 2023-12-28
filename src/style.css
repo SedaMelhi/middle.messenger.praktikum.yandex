@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import '/src/pages/login/login.css';
+@import '/src/pages/chats/chats.css';
+@import '/src/pages/dialog/dialog.css';
+@import '/src/pages/settings/settings.css';
+@import '/src/pages/newPassword/newPassword.css';
+@import '/src/pages/error/error.css';
+
+@import '/src/components/input/input.css';
+@import '/src/components/form/form.css';
+@import '/src/components/button/button.css';
+@import '/src/components/chat/chat.css';
+@import '/src/components/title/title.css';
+@import '/src/components/asideHeader/asideHeader.css';
+@import '/src/components/mainHeader/mainHeader.css';
+@import '/src/components/chatFeed/chatFeed.css';
+@import '/src/components/message/message.css';
+@import '/src/components/inputMessage/inputMessage.css';
+@import '/src/components/chatOptions/chatOptions.css';
+@import '/src/components/avatar/avatar.css';
+@import '/src/components/nav/nav.css';
+@import '/src/components/error/error.css';
+
+
+:root {
+  --bg-color: #0B0B0B;
+  --error-color: #ff2f2f;
+  --text-color: #cbcaca;
+  --label-color: #828282;
+  --stroke-color: #CED3D6;
+  --white: #FFFFFF;
+  --violet: #66F;
+  --dark-violet: rgb(63, 63, 157);
+  --bg2-color: #101010;
+  --header-stroke: #292929;
+  --avatar-color: #006BDA;
+  --active-chat: #000;
+  --message-bg: #181818;
+  --grey: #575757;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 15px;
+  @media(min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+body{
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li{
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, button{
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+img{
+  display: block;
+}
+input{
+  width: 100%;
+  display: block;
+  outline: none;
+  font-size: inherit;
+  &:focus{
+    outline: none;
+  }
+}
+.container-full{
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 0;
+  min-height: 100vh;
+  background: var(--bg2-color);
+  @media(min-width: 1450px) {
+    border-radius: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px; 
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(63, 63, 157, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 157, 0.5);
+}
