@@ -19,7 +19,6 @@
 @import '/src/components/nav/nav.css';
 @import '/src/components/error/error.css';
 
-
 :root {
   --bg-color: #0B0B0B;
   --error-color: #ff2f2f;
@@ -75,9 +74,11 @@ button{
   cursor: pointer;
   color: inherit;
 }
+
 img{
   display: block;
 }
+
 input{
   width: 100%;
   display: block;
@@ -87,6 +88,7 @@ input{
     outline: none;
   }
 }
+
 .container-full{
   max-width: 1440px;
   margin: 0 auto;
