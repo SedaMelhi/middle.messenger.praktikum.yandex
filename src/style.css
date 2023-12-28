@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 @import '/src/pages/login/login.css';
+@import '/src/pages/chats/chats.css';
+@import '/src/pages/dialog/dialog.css';
+@import '/src/pages/settings/settings.css';
+@import '/src/pages/newPassword/newPassword.css';
+@import '/src/pages/error/error.css';
+
 @import '/src/components/input/input.css';
 @import '/src/components/form/form.css';
 @import '/src/components/button/button.css';
-@import '/src/pages/chats/chats.css';
 @import '/src/components/chat/chat.css';
 @import '/src/components/title/title.css';
 @import '/src/components/asideHeader/asideHeader.css';
@@ -11,12 +16,16 @@
 @import '/src/components/chatFeed/chatFeed.css';
 @import '/src/components/message/message.css';
 @import '/src/components/inputMessage/inputMessage.css';
-@import '/src/pages/dialog/dialog.css';
+@import '/src/components/chatOptions/chatOptions.css';
+@import '/src/components/avatar/avatar.css';
+@import '/src/components/nav/nav.css';
+@import '/src/components/error/error.css';
+
 
 :root {
   --bg-color: #0B0B0B;
   --error-color: #ff2f2f;
-  --text-color: #969FA3;
+  --text-color: #cbcaca;
   --label-color: #828282;
   --stroke-color: #CED3D6;
   --white: #FFFFFF;
@@ -84,7 +93,8 @@ input{
   max-width: 1440px;
   margin: 0 auto;
   border-radius: 0;
-  height: 100vh;
+  min-height: 100vh;
+  background: var(--bg2-color);
   @media(min-width: 1450px) {
     border-radius: 20px;
   }

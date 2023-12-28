@@ -7,7 +7,9 @@ const pages = {
   signup: [Pages.SignUpPage],
   chats: [Pages.Chats],
   dialog: [Pages.Dialog],
-  // login: [Pages.LoginPage, { test: '123' }],
+  settings: [Pages.Settings],
+  newpassword: [Pages.NewPassword],
+  error: [Pages.Error],
 };
 
 Object.entries(Components).forEach(([name, component]) => {
@@ -21,7 +23,7 @@ function navigate(page: string) {
   container.innerHTML = Handlebars.compile(source)(context);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('dialog'));
+document.addEventListener('DOMContentLoaded', () => navigate('login'));
 
 document.addEventListener('click', (e) => {
   //@ts-ignore

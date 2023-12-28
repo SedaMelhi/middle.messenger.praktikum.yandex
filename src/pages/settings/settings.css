@@ -1,0 +1,53 @@
+.settings{
+    padding-bottom: 50px;
+}
+
+.btn-file{
+    width: 129px;
+    position: relative;
+    cursor: pointer;
+    input{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        opacity: 1;
+    }
+    button{
+        pointer-events: none;
+    }
+}
+
+.settings__top{
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    @media(min-width: 768px){
+        justify-content: space-between;
+    }
+}
+
+
+
+.settings-content{
+    max-width: 728px;
+    margin: 0 auto;
+    padding: 35px 16px;
+    @media(min-width: 768px) {
+        padding: 83px 20px;
+    }
+}
+
+.settings__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    gap: 8px;
+    @media(min-width: 768px){
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
