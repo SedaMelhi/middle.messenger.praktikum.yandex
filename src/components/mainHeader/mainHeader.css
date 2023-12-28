@@ -19,9 +19,6 @@
     font-weight: 500;
 }
 
-.dots{
-    cursor: pointer;
-}
 
 .arrow-left{
     display: block;
@@ -32,3 +29,4 @@
         pointer-events: none;
     }
 }
+

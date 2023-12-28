@@ -8,3 +8,7 @@ export { Chat } from './chat/chat';
 export { ChatFeed } from './chatFeed/chatFeed';
 export { Message } from './message/message';
 export { InputMessage } from './inputMessage/inputMessage';
+export { ChatOptions } from './chatOptions/chatOptions';
+export { Avatar } from './avatar/avatar';
+export { Nav } from './nav/nav';
+export { Error } from './error/error';
