@@ -3,8 +3,6 @@
 @import '/src/pages/chats/chats.css';
 @import '/src/pages/dialog/dialog.css';
 @import '/src/pages/settings/settings.css';
-@import '/src/pages/newPassword/newPassword.css';
-@import '/src/pages/error/error.css';
 
 @import '/src/components/input/input.css';
 @import '/src/components/form/form.css';
