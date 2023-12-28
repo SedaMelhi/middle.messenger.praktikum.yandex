@@ -99,17 +99,15 @@ input{
     border-radius: 20px;
   }
 }
-/* Стилизация самого скроллбара */
+
 ::-webkit-scrollbar {
-  width: 4px; /* ширина скроллбара */
+  width: 4px; 
 }
 
-/* Стилизация трека (дорожки) скроллбара */
 ::-webkit-scrollbar-track {
-  background: rgb(63, 63, 157, 0.2); /* цвет фона дорожки */
+  background: rgb(63, 63, 157, 0.2);
 }
 
-/* Стилизация ползунка скроллбара */
 ::-webkit-scrollbar-thumb {
-  background: rgb(63, 63, 157, 0.5); /* цвет ползунка */
+  background: rgb(63, 63, 157, 0.5);
 }
