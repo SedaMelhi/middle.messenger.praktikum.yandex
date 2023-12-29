@@ -1,0 +1,11 @@
+<div class='message {{#if avatar}}message_left{{/if}}'>
+  {{#if avatar}}
+  <div class='message-logo'>
+    <img src={{avatar}} alt='avatar' />
+  </div>
+  {{/if}}
+  <div class='message-text'>
+    <div class='message-text__text'>{{message}}</div>
+    <div class='message-text__time'>{{time}}</div>
+  </div>
+</div>

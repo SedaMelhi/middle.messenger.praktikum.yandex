@@ -1,0 +1,7 @@
+<div class='chat__avatar' {{#if size}}style='width:{{size}}; height:{{size}}; font-size: {{font-size}}'{{/if}}>
+  {{#if avatar}}
+    <img src={{avatar}} alt='avatar' />
+  {{else}}
+    {{firstChar name}}
+  {{/if}}
+</div>

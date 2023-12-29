@@ -1,0 +1,15 @@
+<main class='container-full chats-wrap'>
+  <aside class='aside'>
+    {{> AsideHeader}}
+    <div class="chats">
+      {{#each (users)}}
+        {{> Chat}}
+      {{/each}}
+    </div>
+  </aside>
+  <div class='main'>
+   <div class="chat-empty">
+    Select a chat to start messaging
+   </div>
+  </div>
+</main>

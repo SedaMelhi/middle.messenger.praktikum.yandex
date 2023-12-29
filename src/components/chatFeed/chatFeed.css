@@ -1,0 +1,20 @@
+.chat-feed{
+    padding: 20px 16px;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+    @media(min-width: 768px) {
+        max-height: calc(100vh - 172px);
+        padding: 20px;
+    }
+}
+.chat-date{
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--grey);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
