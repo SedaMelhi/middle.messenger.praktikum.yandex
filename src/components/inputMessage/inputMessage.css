@@ -23,6 +23,7 @@
         color: var(--text-color);
     }
 }
+
 .input-message__file{
     input{
         width: 30px;
