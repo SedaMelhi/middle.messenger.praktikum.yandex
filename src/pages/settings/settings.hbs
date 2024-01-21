@@ -1,0 +1,29 @@
+<main class="container-full settings">
+   {{> Nav title='Settings'}}
+    <div class="settings-content">
+       <div class="settings__top"> 
+            <div class="settings__name">
+                {{> Avatar name="Seda" size='80px' font-size='1.6rem'}}
+            </div>
+            <div class="settings__flex">
+                {{> Title title='Seda Gudieva'}}
+                <label class="btn-file" >
+                    <input type="file" >
+                        {{> Button value='Edit avatar' type="transparent" size="48px"}}
+                    </label>
+                
+            </div>
+            
+        </div>
+       {{#> Form}}
+            {{> Input label="First name" name="first_name" placeholder="Name" value="Seda"}}
+            {{> Input label="Surname" name="second_name" placeholder="Surname" value="Gudieva"}}
+            {{> Input label="Email" name="email" type="email" placeholder="emailexample@gmail.com"}}
+            {{> Input label="Display name" name="display_name" placeholder="Enter your name"}}
+            {{> Input label="Login" name="login" placeholder="Login" value="seda_melhi"}}
+            {{> Input label="Phone" name="phone" type="tel" placeholder="+7(999) 999-99-99"}}
+            <div class="btn_margin">{{> Button value="Сhange password" type="transparent" page="newpassword"}}</div>  
+            <div class="btn_margin">{{> Button value="Save changes" type="primary" page='chats'}}</div>  
+        {{/Form}}
+    </div>
+</main>
