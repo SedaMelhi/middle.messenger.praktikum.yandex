@@ -1,0 +1,9 @@
+<main class="container">
+    {{#> Form title="Log in" subtitle="Please authorize to start using the platform" question="Don’t have an account?" link="signup" link-text="Sign up"}}
+        {{> Input label="Login" name="login" placeholder="Login"}}
+        {{> Input label="Password" type="password" name="password" placeholder="Enter your password"}}
+        <div class="btn_margin">
+            {{> Button value="Log in" type="primary" page="chats"}}
+        </div>
+    {{/Form}}
+</main>
