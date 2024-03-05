@@ -1,37 +1,12 @@
 import Handlebars from 'handlebars';
 import * as Components from './components';
-import * as Pages from './pages';
+import { registerComponent } from './core/registerComponent';
+import { navigate } from './core/navigate';
 
-const pages = {
-  login: [Pages.LoginPage],
-  signup: [Pages.SignUpPage],
-  chats: [Pages.Chats],
-  dialog: [Pages.Dialog],
-  settings: [Pages.Settings],
-  newpassword: [Pages.NewPassword],
-  error: [Pages.Error],
-};
+Handlebars.registerPartial('Form', Components.Form);
 
 Object.entries(Components).forEach(([name, component]) => {
-  Handlebars.registerPartial(name, component);
+  registerComponent(name, component);
 });
-
-function navigate(page: string) {
-  //@ts-ignore
-  const [source, context] = pages[page];
-  const container = document.getElementById('app')!;
-  container.innerHTML = Handlebars.compile(source)(context);
-}
 
 document.addEventListener('DOMContentLoaded', () => navigate('login'));
-
-document.addEventListener('click', (e) => {
-  //@ts-ignore
-  const page = e.target.getAttribute('page');
-  if (page) {
-    navigate(page);
-
-    e.preventDefault();
-    e.stopImmediatePropagation();
-  }
-});

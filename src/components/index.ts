@@ -1,6 +1,7 @@
-export { Input } from './input/input';
+export { InputField } from './InputField/InputField';
+export { Input } from './input/Input';
 export { Form } from './form/form';
-export { Button } from './button/button';
+export { default as Button } from './button';
 export { Title } from './title/title';
 export { AsideHeader } from './asideHeader/asideHeader';
 export { MainHeader } from './mainHeader/mainHeader';
