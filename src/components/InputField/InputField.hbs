@@ -1,0 +1,12 @@
+<div class='input'>
+  <label class='input__container'>
+    <div class='input__label'>{{label}}</div>
+    {{{Input
+      classes='input__element {{#if error}}input_error{{/if}}'
+      type=type
+      name=name
+      ref='input'
+    }}}
+    {{#if error}}<div class='error-text'>{{error}}</div>{{/if}}
+  </label>
+</div>
