@@ -8,22 +8,24 @@ export interface InputProps extends IProps {
   type: string;
   classes: string;
   placeholder: string;
-  onChange: (e: Event) => void;
+  error: string;
+  onBlur: (e: Event) => void;
 }
-export class Input extends Block<InputProps, RefType> {
+export class Input extends Block<InputProps, RefType, HTMLInputElement> {
   constructor(props: InputProps) {
     super({
       ...props,
       events: {
-        change: props.onChange,
+        blur: props.onBlur,
       },
     });
   }
 
   protected render(): string {
-    const { classes, placeholder, name, type, value } = this.props;
+    const { classes, placeholder, name, type, value, error } = this.props;
+
     return `<input 
-        class="${classes}" 
+        class="${classes + (error ? ' input_error' : '')}" 
         placeholder="${placeholder}" 
         value="${value}" 
         name="${name}" 

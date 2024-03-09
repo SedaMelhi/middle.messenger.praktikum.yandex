@@ -2,9 +2,7 @@ import EventBus from './EventBus';
 import { nanoid } from 'nanoid';
 import Handlebars from 'handlebars';
 
-export type RefType = {
-  [key: string]: Element | Block<object>;
-};
+export type ElementType = HTMLElement | HTMLInputElement | null;
 
 export interface BlockClass<P extends object, R extends RefType> extends Function {
   new (props: P): Block<P, R>;
@@ -19,8 +17,15 @@ export interface IProps {
   [key: string]: any;
   events?: EventListeners;
 }
+export type RefType = {
+  [key: string]: Element | Block<IProps, RefType, ElementType>;
+};
 
-class Block<Props extends IProps, Refs extends RefType = RefType> {
+class Block<
+  Props extends IProps,
+  Refs extends RefType = RefType,
+  Element extends ElementType = null,
+> {
   static EVENTS = {
     INIT: 'init',
     FLOW_CDM: 'flow:component-did-mount',
@@ -34,7 +39,7 @@ class Block<Props extends IProps, Refs extends RefType = RefType> {
   protected refs: Refs = {} as Refs;
   private children: Block<object>[] = [];
   private eventBus: () => EventBus;
-  private _element: Element | null = null;
+  private _element: Element = null as Element;
 
   constructor(props: Props = {} as Props) {
     const eventBus = new EventBus();
@@ -140,7 +145,7 @@ class Block<Props extends IProps, Refs extends RefType = RefType> {
       this._element.replaceWith(newElement);
     }
 
-    this._element = newElement;
+    this._element = newElement as Element;
 
     this._addEvents();
   }

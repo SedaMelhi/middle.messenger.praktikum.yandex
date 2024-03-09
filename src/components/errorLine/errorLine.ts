@@ -1,19 +1,15 @@
 import Block from './../../core/Block';
 import { IProps, RefType } from './../../core/Block';
-import ButtonElement from './button.hbs?raw';
+import Component from './errorLine.hbs?raw';
 
-interface ButtonProps extends IProps {
+interface Props extends IProps {
   classes: string;
-  page: string;
-  onClick: (e: Event) => void;
+  ref: string;
 }
-export class Button extends Block<ButtonProps, RefType> {
-  constructor(props: ButtonProps) {
+export class ErrorLine extends Block<Props, RefType> {
+  constructor(props: Props) {
     super({
       ...props,
-      events: {
-        click: props.onClick,
-      },
     });
   }
   // protected init(): void {
@@ -25,6 +21,6 @@ export class Button extends Block<ButtonProps, RefType> {
   // }
 
   protected render(): string {
-    return ButtonElement;
+    return Component;
   }
 }
