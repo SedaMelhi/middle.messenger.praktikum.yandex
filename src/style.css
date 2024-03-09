@@ -4,7 +4,7 @@
 @import '/src/pages/dialog/dialog.css';
 @import '/src/pages/settings/settings.css';
 
-@import '/src/components/input/input.css';
+@import '/src/components/inputField/inputField.css';
 @import '/src/components/form/form.css';
 @import '/src/components/button/button.css';
 @import '/src/components/chat/chat.css';

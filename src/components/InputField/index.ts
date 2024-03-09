@@ -1,1 +1,1 @@
-export { InputField } from './InputField.ts';
+export { InputField } from './inputField.ts';

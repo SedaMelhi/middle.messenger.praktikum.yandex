@@ -1,47 +1,56 @@
-import { Input } from './../input/Input';
+import InputComponent from './inputField.hbs?raw';
 import Block from '../../core/Block';
 import { IProps } from '../../core/Block';
-import InputComponent from './InputField.hbs?raw';
+import { Input } from '../input/input';
+import { ErrorLine } from './../errorLine';
 
 export interface InputFieldProps extends IProps {
   name: string;
   value: string;
   type: string;
   placeholder: string;
-  onChange: (e: Event) => void;
+  onBlur: (e: Event) => void;
 }
 
 type Refs = {
   input: Input;
+  errorLine: ErrorLine;
 };
 
 export class InputField extends Block<InputFieldProps, Refs> {
   constructor(props: InputFieldProps) {
     super({
       ...props,
-      onChange: () => this.validate(),
+      error: false,
+      value: props.value ? props.value : '',
+      onBlur: () => this.validate(),
     });
   }
-  public value() {
+  public getValue() {
     if (!this.validate()) {
       return null;
     }
-    return this.refs.input.element!.value;
+    return this.refs.input.element.value;
   }
 
   private validate() {
     const value = this.refs.input.element.value;
-    const error = this.props.validate?.(value);
+    const error = this.props.validate(value);
+
     if (error) {
+      this.refs.input.setProps({ error, value });
       this.refs.errorLine.setProps({ error });
+
       return false;
+    } else {
+      this.refs.input.setProps({ error, value });
+      this.refs.errorLine.setProps({ error });
     }
-    this.refs.errorLine.setProps({ error: undefined });
     return true;
   }
 
   protected render(): string {
-    //const { classes, placeholder, name, type, value } = this.props;
+    console.log(this.refs);
     return InputComponent;
   }
 }
