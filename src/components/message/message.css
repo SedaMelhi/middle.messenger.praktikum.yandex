@@ -9,19 +9,22 @@
 .message-text{
     color: var(--text-color);
     padding: 12px 20px;
-    border-radius: 20px 20px 0 20px;
+    border-radius: 20px 20px 0;
     background: var(--message-bg);
     line-height: 1.5;
     max-width: 400px;
-    @media(min-width: 768px) {
+
+    @media(width >= 768px) {
         max-width: 600px;
     }
-    @media(min-width: 1200px) {
+
+    @media(width >= 1200px) {
         max-width: 400px;
     }
     
     
 }
+
 .message-text__time{
     display: flex;
     justify-content: flex-end;
@@ -30,8 +33,10 @@
     color: var(--grey);
     font-size: .8rem; 
 }
+
 .message_left{
     justify-content: flex-start;
+
     .message-text{
         border-radius: 20px 20px 20px 0;
     }
@@ -41,12 +46,14 @@
     width: 50px;
     height: 50px;
     flex-shrink: 0;
+
     img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    @media(min-width: 768px) {
+
+    @media(width >= 768px) {
         width: 60px;
         height: 60px;
     }

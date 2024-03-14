@@ -1,12 +1,16 @@
-<main class="container">
-    {{#> Form title="Sign up" subtitle="Please register to start using the platform" question="Already have an account?" link="login" link-text="Log in"}}
-        {{> Input label="First name" name="first_name" placeholder="Name"}}
-        {{> Input label="Surname" name="second_name" placeholder="Surname"}}
-        {{> Input label="Login" name="login" placeholder="Login"}}
-        {{> Input label="Email" name="email" type="email" placeholder="emailexample@gmail.com"}}
-        {{> Input label="Phone" name="phone" type="tel" placeholder="+7(999) 999-99-99"}}
-        {{> Input label="Password" name="password" type="password" placeholder="Enter your password"}}
-        {{> Input label="Confirm password" name="password" type="password" placeholder="Enter your password"}}
-        <div class="btn_margin">{{> Button value="Sign up" type="primary" page="chats"}}</div>
+<main class='container'>
+  {{#> Form title="Sign up" subtitle="Please register to start using the platform" question="Already have an account?" link="login" link-text="Log in" toLink=toLink}}
+      {{{ InputField label="First name" type="text" name="first_name" placeholder="Name" ref='name' validate=validate.first_name }}}
+      {{{ InputField label="Surname" name="second_name" placeholder="Surname" ref='surname' validate=validate.second_name type='text'}}}
+      {{{ InputField label="Login" name="login" placeholder="Login" ref='login' validate=validate.login type='text'}}}
+      {{{ InputField label="Email" name="email" type="email" placeholder="emailexample@gmail.com" ref='email' validate=validate.email}}}
+      {{{ InputField label="Phone" name="phone" type="tel" placeholder="+7(999) 999-99-99" ref="phone" validate=validate.phone}}}
+      {{{ InputField label="Password" type="password" name="password" placeholder="Enter your password" ref='password' validate=validate.password}}}
+      {{{ InputField label="Confirm password" type="password" name="password" placeholder="Enter your password" ref='passwordConfirm' validate=validate.password}}}
+      <div class="btn_margin">
+        {{{ Button value="Sign up" type="primary" onClick=onClick page="chats"}}}
+      </div>
+        
     {{/Form}}
+ 
 </main>

@@ -2,5 +2,5 @@
     <div class="form__title">{{title}}</div>
     <div class="form__subtitle">{{subtitle}}</div>
     {{> @partial-block }}
-    <div class="form__question">{{question}} <span page="{{link}}">{{link-text}}</span></div>
+    <div class="form__question" >{{question}} {{{Link link-text=link-text toLink=toLink class='link'}}}</div>
 </form>
