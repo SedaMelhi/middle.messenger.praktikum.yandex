@@ -5,12 +5,15 @@
     height: 77px;
     padding: 0 20px;
     border-bottom: 1px solid var(--header-stroke);
-    @media(min-width: 768px) {
+
+    @media(width >= 768px) {
         height: 92px;
     }
 }
+
 .settings__logo{
     cursor: pointer;
+
     img{
         pointer-events: none;
     }

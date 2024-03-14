@@ -1,18 +1,16 @@
 <main class='container-full chats-wrap dialog'>
   <aside class='aside'>
-    {{> AsideHeader}}
-    <div class="chats">
-      {{#each (users)}}
-        {{> Chat}}
-      {{/each}}
-    </div>
+    {{{AsideHeader toLink=toSettings}}}
+    {{{Chats}}}
   </aside>
   <div class='main'>
-    {{> MainHeader}}
-    {{> ChatFeed }}
-    <div class="input-message__wrap">
-      {{> InputMessage}}
-      {{> Button value="Send"}}
-    </div>
+    {{{MainHeader}}}
+    {{{ChatFeed}}}
+    {{#> Form }}
+      <div class='input-message__wrap'>
+        {{{InputMessage validate=validate.message ref='inputMessage'}}}
+        {{{Button value='Send' onClick=onClick}}}
+      </div>
+    {{/Form}}
   </div>
 </main>

@@ -1,9 +1,10 @@
 <header class='header'>
-    <div class="arrow-left" page="chats">
-        <img src="./arrow-left.svg" alt="chats">
-    </div>
-    <div class='user-name'>
-        {{> Title title="Chats" img="./user-img.png" alt="avatar"}}
-    </div>
-   {{> ChatOptions}}
+  <div class='arrow-left' page='chats'>
+    {{{Link img='./arrow-left.svg' alt='chats' toLink=toLink}}}
+
+  </div>
+  <div class='user-name'>
+    {{{Title title='Chats' img='./user-img.png' alt='avatar'}}}
+  </div>
+  {{{ChatOptions}}}
 </header>
