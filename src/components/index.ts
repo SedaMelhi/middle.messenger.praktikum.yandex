@@ -1,7 +1,6 @@
-export { InputField } from './inputField/inputField';
-export { Input } from './input';
+export { Input } from './input/input';
 export { Form } from './form/form';
-export { default as Button } from './button';
+export { Button } from './button/button';
 export { Title } from './title/title';
 export { AsideHeader } from './asideHeader/asideHeader';
 export { MainHeader } from './mainHeader/mainHeader';
@@ -13,4 +12,3 @@ export { ChatOptions } from './chatOptions/chatOptions';
 export { Avatar } from './avatar/avatar';
 export { Nav } from './nav/nav';
 export { Error } from './error/error';
-export { ErrorLine } from './errorLine';
