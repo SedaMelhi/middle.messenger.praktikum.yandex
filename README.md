@@ -21,4 +21,4 @@
 ## Cсылки
 
 **Макет в Figma:** https://www.figma.com/file/BrzANBgDB3Dw8MqGQ5qxFF/Sprint-I?type=design&node-id=102%3A2004&mode=dev</li>  
-**Развернутый сайт на Netlify:** https://timely-kheer-cdf620.netlify.app/
+**Развернутый сайт на Netlify:** https://deploy--glittery-brigadeiros-af8848.netlify.app/
