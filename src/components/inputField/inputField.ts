@@ -38,13 +38,12 @@ export class InputField extends Block<InputFieldProps, Refs> {
   private validate() {
     const value = this.refs.input.element.value;
     const error = this.props.validate(value);
-
     if (error) {
-      this.refs.input.setProps({ error, value });
+      //this.refs.input.setProps({ error, value });
       this.refs.errorLine.setProps({ error });
       return false;
     } else {
-      this.refs.input.setProps({ error, value });
+      //this.refs.input.setProps({ error, value });
       this.refs.errorLine.setProps({ error });
     }
     return true;
