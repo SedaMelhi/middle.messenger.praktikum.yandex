@@ -30,7 +30,6 @@ export class Input extends Block<InputProps, RefType, HTMLInputElement> {
         value="${value}" 
         name="${name}" 
         type="${type}" 
-        value="${value}"
     />`;
   }
 }

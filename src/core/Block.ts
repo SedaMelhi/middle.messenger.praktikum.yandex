@@ -95,7 +95,8 @@ class Block<
   }
 
   protected componentDidUpdate(oldProps: Props, newProps: Props) {
-    console.log(oldProps, newProps);
+    oldProps; //временно, чтобы убрать предупреждение, что я их не использую
+    newProps;
     return true;
   }
 
