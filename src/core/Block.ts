@@ -95,6 +95,7 @@ class Block<
   }
 
   protected componentDidUpdate(oldProps: Props, newProps: Props) {
+    console.log(oldProps, newProps);
     return true;
   }
 
