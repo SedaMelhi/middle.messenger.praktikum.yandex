@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite --port 3000",
     "build": "tsc && vite build",
-    "start": "tsc && vite build && vite --port 3000",
-    "preview": "vite preview --port 3000"
+    "start": "vite --port 3000",
+    "preview": "vite preview"
   },
   "engines": {
     "node": ">=16.16.0"
