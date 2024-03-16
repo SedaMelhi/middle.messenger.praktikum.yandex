@@ -7,7 +7,8 @@
     border-radius: 12px;
     border: 1px solid var(--header-stroke);
     padding: 10px 16px;
-    @media(min-width: 768px) {
+
+    @media(width >= 768px) {
         padding: 10px 24px;
     }
 }
@@ -19,6 +20,7 @@
     background-color: transparent;
     border: none;
     color: var(--white);
+
     &::placeholder{
         color: var(--text-color);
     }
@@ -30,6 +32,7 @@
         height: 100%;
         opacity: 0;
     }
+
     img{
         position: absolute;
         top: 16px;

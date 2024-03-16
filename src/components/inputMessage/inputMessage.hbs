@@ -4,5 +4,15 @@
     <img src='./clip.svg' alt='add files' />
     <input type='file' name='' id='' />
   </label>
-  <input type='text' name='message' placeholder='Your message...' class='input-message__input' />
+  {{{InputField
+    label=''
+    type='text'
+    name='message'
+    placeholder='Your message...'
+    classes='input-message__input'
+    blur='none'
+    validate=validate
+    ref='message'
+  }}}
+
 </div>

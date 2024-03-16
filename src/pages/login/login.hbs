@@ -1,9 +1,9 @@
 <main class="container">
-    {{#> Form title="Log in" subtitle="Please authorize to start using the platform" question="Don’t have an account?" link="signup" link-text="Sign up"}}
-        {{> Input label="Login" name="login" placeholder="Login"}}
-        {{> Input label="Password" type="password" name="password" placeholder="Enter your password"}}
+    {{#> Form title="Log in" subtitle="Please authorize to start using the platform" question="Don’t have an account?" link="signup" link-text="Sign up" toLink=toLink }}
+        {{{ InputField label="Login" name="login" placeholder="Login" ref='login' validate=validate.login type='text'}}}
+        {{{ InputField label="Password" type="password" name="password" placeholder="Enter your password" ref='password' validate=validate.password}}}
         <div class="btn_margin">
-            {{> Button value="Log in" type="primary" page="chats"}}
+            {{{ Button value="Log in" type="primary" page="chats" onClick=onClick}}}
         </div>
     {{/Form}}
 </main>

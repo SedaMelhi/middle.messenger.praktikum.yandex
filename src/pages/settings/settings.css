@@ -6,6 +6,7 @@
     width: 129px;
     position: relative;
     cursor: pointer;
+
     input{
         position: absolute;
         top: 0;
@@ -13,6 +14,7 @@
         z-index: -1;
         opacity: 1;
     }
+
     button{
         pointer-events: none;
     }
@@ -22,7 +24,8 @@
     display: flex;
     justify-content: flex-start;
     gap: 16px;
-    @media(min-width: 768px){
+
+    @media(width >= 768px){
         justify-content: space-between;
     }
 }
@@ -33,7 +36,8 @@
     max-width: 728px;
     margin: 0 auto;
     padding: 35px 16px;
-    @media(min-width: 768px) {
+
+    @media(width >= 768px) {
         padding: 83px 20px;
     }
 }
@@ -45,7 +49,8 @@
     flex-direction: column;
     width: auto;
     gap: 8px;
-    @media(min-width: 768px){
+
+    @media(width >= 768px){
         width: 100%;
         flex-direction: row;
     }
