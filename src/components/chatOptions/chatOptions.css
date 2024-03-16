@@ -1,6 +1,7 @@
 .dots{
     cursor: pointer;
     position: relative;
+
     label{
         cursor: pointer;
     }
@@ -27,14 +28,17 @@
     font-size: .7rem;
     line-height: 1.2;
     padding: 7px 15px;
+
     &:first-child{
         padding: 15px 15px 7px;
         border-radius: 12px 12px 0 0;
     }
+
     &:last-child{
         padding: 7px 15px 15px;
         border-radius: 0 0 12px 12px;
     }
+
     &:hover{
         background: var(--bg-color);
     }

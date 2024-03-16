@@ -6,6 +6,7 @@
     align-items: center;
     border-radius: 12px;
     background: var(--violet);
+
     &:active{
         background-color: var(--dark-violet);
     }
